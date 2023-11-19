@@ -21,9 +21,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="nav nav-underline" style="position: relative; left: 476px;">
+            <ul class="nav nav-underline" style="position: relative; left: 456px;">
               <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="{{ url('dashboard')}}">Home</a>
+                <a class="nav-link text-white" aria-current="page" href="{{ url('dashboard')}}">Dashboard</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="{{ url('about')}}">About</a>

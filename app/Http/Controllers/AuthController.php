@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -22,5 +22,6 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
             'telp' => $request->telp
         ]);
+        return redirect('/login');
     }
 }

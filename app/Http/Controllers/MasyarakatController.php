@@ -12,7 +12,7 @@ class MasyarakatController extends Controller
         $isi_nama = $request->nama;
     
         DB::table('masyarakat')->insert([
-          'nik' => '18236',
+          'nik' => '2324',
           'nama' => $isi_nama,
           'username' => 'riri2983',
           'passwordd' => '2933'

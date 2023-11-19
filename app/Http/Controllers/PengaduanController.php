@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Masyarakat;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Pengaduan;
 
 
@@ -40,12 +40,12 @@ class PengaduanController extends Controller
 
     DB::table('pengaduan')->insert([
       'tgl_pengaduan' => date('y-m-d'),
-      'nik' => '18236',
+      'nik' => '2324',
       'isi_laporan' => $request->isi_laporan,
       'foto' => $nama,
       'status' => 'proses'
     ]);
-
+    
     return redirect('/dashboard');
   }
 

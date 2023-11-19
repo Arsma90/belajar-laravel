@@ -15,13 +15,13 @@
 <body style="background-color: rgb(9, 120, 175);">
     
         <div class="login">
-            <h1 class="judul">LOGIN</h1>
-            <form action="" method="POST">
+            <h1 class="judul">PETUGAS</h1>
+            <form action="{{url('/loginpetugas')}}" method="POST">
+                @method('POST')
                 @csrf
-                <input type="text" class="border-box" placeholder="Username" name="username" required>
-                <input type="password" class="border-box" placeholder="Password" name="password" required>
-                <button type="submit" name="submit" class="login-btn">LOGIN</button>
-                <p>Belum buat akun?<a href="{{url('/register')}}" class="daftar">Buat dulu</a></p>
+                <input type="username" class="border-box" placeholder="Username" name="username" required autocomplete="off">
+                <input type="password" class="border-box" placeholder="Password" name="password" autocomplete="off">
+                <a href=""><button type="submit" class="login-btn">LOGIN</button></a>
             </form>
         </div>
 </body>

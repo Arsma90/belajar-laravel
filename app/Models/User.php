@@ -43,5 +43,8 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    protected $primaryKey = "nik";
+
+    protected  $keyType = 'string';
     protected $table = "masyarakat";
 }

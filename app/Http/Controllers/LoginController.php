@@ -11,19 +11,20 @@ use illuminate\Support\Facades\Session;
 class LoginController extends Controller
 {
     function index(){
-        return view("login");
+        return view("/login");
     }
-    function login(Request $request){
-        
-        if(Auth::attempt($request->only("username", "password"))){
-            return redirect("/halutama");
-        }
 
-        return "Maaf, Username atau Password Yang Anda Masukan Salah!!";
+    function login(Request $request){
+        $data = $request->only('username', 'password');
+        $masuk = Auth::attempt($data);  
+        if($masuk){
+            return redirect('/halutama');
+        }else{
+            return redirect('/login')->with('error', 'username atau password salah');
+        }
     }
     
     function logout(){
-        Session::flush();
         Auth::logout();
 
         return redirect('/login');
